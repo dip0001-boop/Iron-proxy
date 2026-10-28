@@ -1,0 +1,24 @@
+{
+  "name": "iron-proxy",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "IRON CORE / IRON BROWSER / IRON NETWORK experimental proxy browser",
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node --test test/*.test.js",
+    "check": "node --check src/server.js && node --check public/app.js",
+    "bench": "node scripts/bench.js"
+  },
+  "dependencies": {
+    "css-tree": "^3.2.1",
+    "ipaddr.js": "^2.5.0",
+    "parse5": "^8.0.1",
+    "tough-cookie": "^6.0.2",
+    "undici": "^7.16.0"
+  }
+}

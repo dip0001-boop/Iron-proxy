@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: iron-proxy
+    runtime: node
+    plan: free
+    buildCommand: npm install --omit=dev
+    startCommand: npm start
+    healthCheckPath: /healthz
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: IRON_ACCESS_KEY
+        sync: false
+      - key: BRAVE_SEARCH_API_KEY
+        sync: false
+      - key: IRON_PUBLIC_ORIGIN
+        sync: false
